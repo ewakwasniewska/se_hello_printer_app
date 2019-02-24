@@ -3,6 +3,9 @@ python:
   - "2.7"
 install:
   - make deps
+service:
+  - docker
 script:
   - make  lint
   - make test
+  - docker build
