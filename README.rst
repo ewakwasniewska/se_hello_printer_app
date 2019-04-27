@@ -39,7 +39,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
     $ PYTHONPATH=. py.test  --verbose -s
 
 - Kontynuując pracę z projektem, aktywowanie hermetycznego środowiska dla aplikacji py:
-
+ 
   ::
 
     $ source /usr/local/bin/virtualenvwrapper.sh # nie trzeba, jeśli już w .bashrc
@@ -47,7 +47,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
     
     ...
 
-    # deaktywacja virtualenv
+    #   deaktywacja virtualenv
     $ deactivate
 
 - Integracja z TravisCI:
