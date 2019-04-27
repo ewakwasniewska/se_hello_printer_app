@@ -106,9 +106,10 @@ Centos
 
 
 
-     .. image:: https://travis-ci.org/ewakwasniewska/se_hello_printer_app.svg?branch=master
-    :target: https://travis-ci.org/ewakwasniewska/se_hello_printer_app
 Materiały
 =========
+
+.. image:: https://travis-ci.org/ewakwasniewska/se_hello_printer_app.svg?branch=master
+    :target: https://travis-ci.org/ewakwasniewska/se_hello_printer_app
 
 - https://virtualenvwrapper.readthedocs.io/en/latest/
