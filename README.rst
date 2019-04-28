@@ -108,8 +108,12 @@ Centos
 
 Materiały
 =========
-
+# travis
 .. image:: https://travis-ci.org/ewakwasniewska/se_hello_printer_app.svg?branch=master
     :target: https://travis-ci.org/ewakwasniewska/se_hello_printer_app
+
+# statusCake
+.. image:: https://app.statuscake.com/button/index.php?Track=yTbS3XjUXV&Days=1&Design=1
+    :target: http://www.statuscake.com
 
 - https://virtualenvwrapper.readthedocs.io/en/latest/
