@@ -10,8 +10,10 @@ lint:
 test:
 		PYTHONPATH=. py.test --verbose -s
 
-test_cov: 
+test_cov:
+	PYTHONPATH=. py.test --verbose -s --cov=. 	
 	PYTHONPATH=. py.test --verbose -s --cov=. --cov-report xml
+
 test_xuni:
 	 PYTHONPATH=. py.test --verbose -s --cov=. --cov-report xml --junit-xml=test_results.xml
 
@@ -20,6 +22,25 @@ test_xuni:
 
 run:
 	 PYTHONPATH=. FLASK_APP=hello_world flask run
+
+# JENKINS 
+run_jenkins:
+	docker run -d --name jenkins-wsb \
+		-p 8080:8080 \
+		-v $$(pwd)/jenkins:var/jenkins_home \
+		devops/jenkins
+
+start_jenkins:
+	docker start jenkins-wsb
+
+bash_jenkins:
+	docker exec -ti jenkins-wsb  /bin/bash
+
+build jenkins:
+	docker build -t devops/jenkind -f Dockerfile .
+
+show_me_password:
+	cat jenkins/secrets/initialAdminPassword
 
 docker_build:
 		docker build -t hello-world-printer .
@@ -42,6 +63,6 @@ docker_push: docker_build
 test_smoke:
 	curl --fail 127.0.0.1:5000
 
-targets
+
 
 
